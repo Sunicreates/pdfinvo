@@ -6,7 +6,7 @@ services:
     plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
-    rootDir: apps/api
+    rootDir: backend
     envVars:
       - key: NODE_ENV
         value: production
@@ -15,8 +15,8 @@ services:
       # Add other environment variables in Render dashboard
     buildFilter:
       paths:
-        - apps/api/**
+        - backend/**
       ignoredPaths:
-        - apps/web/**
-        - docs/**
+        - frontend/**
+        - packages/**
         - "*.md"
